@@ -1,0 +1,94 @@
+/* Relatable brand tokens. Load Rubik (Google Fonts or the files in /fonts) first. */
+:root {
+  --surface: #F6F1E7;
+  --surface-raised: #FFFCF6;
+  --surface-sunken: #EDE6D8;
+  --line: #DDD3C2;
+  --ink: #1F1B2E;
+  --ink-muted: #5E5870;
+  --tomato: #E4572E;
+  --tomato-text: #B83A17;
+  --on-tomato: #1F1B2E;
+  --tomato-soft: #FADBD0;
+  --teal: #1B8A8C;
+  --teal-text: #136466;
+  --teal-deep: #136466;
+  --on-teal-deep: #F6F1E7;
+  --teal-soft: #D3ECEA;
+  --mustard: #F2B134;
+  --on-mustard: #1F1B2E;
+  --mustard-soft: #FBE7B8;
+  --pip: #F6F1E7;
+  --success: #276B43;
+  --error: #B3261E;
+  --focus-ring: var(--teal-text);
+  --shadow-piece: 0 4px 0 #1F1B2E;
+  --shadow-lift: 0 10px 28px -6px #1F1B2E33;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-20: 80px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --font-sans: "Rubik", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --surface: #1F1B2E;
+  --surface-raised: #2A2540;
+  --surface-sunken: #17142A;
+  --line: #3A3452;
+  --ink: #F6F1E7;
+  --ink-muted: #BEB6CC;
+  --tomato: #E4572E;
+  --tomato-text: #F07A55;
+  --on-tomato: #1F1B2E;
+  --tomato-soft: #4A2216;
+  --teal: #1B8A8C;
+  --teal-text: #5CC8CA;
+  --teal-deep: #136466;
+  --on-teal-deep: #F6F1E7;
+  --teal-soft: #123D3F;
+  --mustard: #F2B134;
+  --on-mustard: #1F1B2E;
+  --mustard-soft: #4A3A12;
+  --pip: #F6F1E7;
+  --success: #6CC08E;
+  --error: #FF8A80;
+  --focus-ring: var(--teal-text);
+  --shadow-piece: 0 4px 0 #0B0914;
+  --shadow-lift: 0 12px 28px -6px #000000B3;
+  }
+}
+:root[data-theme="dark"] {
+  --surface: #1F1B2E;
+  --surface-raised: #2A2540;
+  --surface-sunken: #17142A;
+  --line: #3A3452;
+  --ink: #F6F1E7;
+  --ink-muted: #BEB6CC;
+  --tomato: #E4572E;
+  --tomato-text: #F07A55;
+  --on-tomato: #1F1B2E;
+  --tomato-soft: #4A2216;
+  --teal: #1B8A8C;
+  --teal-text: #5CC8CA;
+  --teal-deep: #136466;
+  --on-teal-deep: #F6F1E7;
+  --teal-soft: #123D3F;
+  --mustard: #F2B134;
+  --on-mustard: #1F1B2E;
+  --mustard-soft: #4A3A12;
+  --pip: #F6F1E7;
+  --success: #6CC08E;
+  --error: #FF8A80;
+  --focus-ring: var(--teal-text);
+  --shadow-piece: 0 4px 0 #0B0914;
+  --shadow-lift: 0 12px 28px -6px #000000B3;
+}
