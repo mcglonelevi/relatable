@@ -28,14 +28,15 @@ The logo is two dice shaped as speech bubbles. It shows people talking about a g
 | File | Use it for |
 | --- | --- |
 | `relatable-logo-stacked-*` | Game boxes, posters, the About page, square spaces. |
-| `relatable-logo-horizontal-*` | The website header, email signatures, banners, rulebook covers. |
+| `relatable-logo-horizontal-*` | Email signatures, banners, rulebook covers. The tagline is part of the logo here, so use it large enough to read. |
+| `relatable-logo-horizontal-notagline-*` | The website header and other small placements, where the tagline would be too small to read. |
 | `relatable-icon.svg` | Social media avatars, the browser-tab icon, the app icon, stickers, dice stamps. |
 | `relatable-wordmark-*` | Tight spaces where the dice already appear nearby. |
 
 Each file comes in `-on-light` (ink text) and `-on-dark` (cream text). The dice look the same on both.
 
 - **Clear space:** keep empty space around the logo equal to the width of one pip-column of the red die, about a quarter of its width. Nothing should intrude on it.
-- **Minimum size:** the horizontal logo at 140px wide (35mm in print). The icon at 24px (8mm). Below those sizes, use the icon alone.
+- **Minimum size:** the horizontal logo at 140px wide (35mm in print), with or without the tagline. If the tagline won't be legible at the size you need, use the `-notagline` version. The icon at 24px (8mm). Below those sizes, use the icon alone.
 - **Backgrounds:** use `surface` (cream) or `ink` (night). The logo also works on `mustard-soft` or `teal-soft`. Never put it on a tomato or teal fill, or on a busy photo.
 - **Don't:** recolor the dice, swap which die is in front, add pips, stretch or rotate the logo, add a drop shadow, or set "relatable" in a different font.
 
