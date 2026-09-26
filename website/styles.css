@@ -422,7 +422,7 @@ a:hover { text-decoration-thickness: 2px; }
   font-weight: 800; font-size: 19px;
   box-shadow: var(--shadow-piece);
 }
-.step__art { background: var(--tomato-soft); border-radius: var(--radius-md); padding: var(--space-6) 0; margin-bottom: var(--space-3); }
+.step__art { background: var(--game-lead-soft, var(--tomato-soft)); border-radius: var(--radius-md); padding: var(--space-6) 0; margin-bottom: var(--space-3); }
 .step__art img { width: 52%; margin: 0 auto; }
 .step p { color: var(--ink-muted); }
 
@@ -440,6 +440,21 @@ a:hover { text-decoration-thickness: 2px; }
 }
 .pip-list strong { font-weight: 600; }
 .pip-list span { color: var(--ink-muted); }
+
+/* A game page sets its lead colour's soft tint on <main class="game--teal"> (tomato is the default). */
+.game--teal { --game-lead-soft: var(--teal-soft); }
+.game--mustard { --game-lead-soft: var(--mustard-soft); }
+
+/* Tic-Tac-Bro: the happy/angry card pair */
+.mood-pair {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);
+  max-width: 440px; width: 100%; justify-self: center;
+}
+.mood-pair figure { margin: 0; display: grid; gap: var(--space-3); justify-items: center; }
+.mood-pair li:first-child .game-card-img { transform: rotate(-3deg); }
+.mood-pair li:last-child .game-card-img { transform: rotate(3deg); }
+.mood-pair figcaption { color: var(--teal-text); }
 
 /* Card gallery */
 .card-grid {

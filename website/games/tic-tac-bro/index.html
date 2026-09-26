@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic-Tac-Bro · Relatable</title>
+  <meta name="description" content="You've played tic-tac-toe a thousand times. Never against your big brother. A card game for 2–4 players (plus Big Bro), 20–30 minutes.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F6F1E7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1F1B2E" media="(prefers-color-scheme: dark)">
+
+  <link rel="canonical" href="https://relatable.gg/games/tic-tac-bro/">
+  <link rel="icon" href="/assets/logos/relatable-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://relatable.gg/games/tic-tac-bro/">
+  <meta property="og:title" content="Tic-Tac-Bro · Relatable">
+  <meta property="og:description" content="Tic-tac-toe, but your big brother makes the rules. A card game for 2–4 players (plus Big Bro), 20–30 minutes.">
+  <meta property="og:image" content="https://relatable.gg/assets/games/tic-tac-bro/social-share.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="/assets/fonts/rubik-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/rubik-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/" aria-label="Relatable home">
+        <picture>
+          <source srcset="/assets/logos/relatable-logo-horizontal-notagline-on-dark.svg" media="(prefers-color-scheme: dark)">
+          <img src="/assets/logos/relatable-logo-horizontal-notagline-on-light.svg" alt="Relatable" width="142" height="42">
+        </picture>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="/#games">Games</a></li>
+          <li><a href="/#why">About</a></li>
+          <li><a href="/#newsletter">Newsletter</a></li>
+        </ul>
+        <a class="btn btn--primary btn--small" href="#get-it">Get the game</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="game--teal">
+    <!-- 1–3. The familiar thing, the twist, the stats -->
+    <section class="game-hero">
+      <div class="container">
+        <div>
+          <p class="breadcrumb caption"><a href="/#games">Our games</a> / Card game</p>
+          <h1><img src="/assets/games/tic-tac-bro/logo.svg" alt="Tic-Tac-Bro" width="400" height="198"></h1>
+          <p class="familiar">You've played tic-tac-toe a thousand times.</p>
+          <p class="twist body-lg">Never against your big brother. He says tic-tac-toe is for babies, so he "fixed" it, and now he's bet he can beat the whole table by himself.</p>
+
+          <ul class="stats" aria-label="Game facts">
+            <li><span class="label">Players</span><strong>2–4 + Big Bro</strong></li>
+            <li><span class="label">Time</span><strong>20–30 min</strong></li>
+            <li><span class="label">To win</span><strong>5 points</strong></li>
+          </ul>
+
+          <div class="hero__actions" style="margin-top:0">
+            <a class="btn btn--primary" href="#get-it">Tell me when it's out</a>
+            <a class="btn btn--secondary" href="/assets/games/tic-tac-bro/tic-tac-bro-rules.pdf">Read the rules (PDF)</a>
+          </div>
+        </div>
+
+        <div class="game-hero__art">
+          <span class="sticker label">In playtesting</span>
+          <img class="box-art" src="/assets/games/tic-tac-bro/box-top.webp" width="1000" height="1267"
+               alt="Tic-Tac-Bro: “Tic Tac Toe with your crazy bro!”, with Big Bro's Sucker Punch, Table Flip and Stir the Pot cards. 2–4 players, 20–30 min.">
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. How it plays -->
+    <section class="band band--sunken" id="how-it-plays" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">How it plays</span>
+          <h2 class="h2" id="how-title">You already know how to get three in a row</h2>
+          <p>Everyone gets their own board. Big Bro doesn't need one. He plays on yours.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">1</span>
+            <div class="step__art">
+              <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/row-a.webp" width="504" height="672" alt="The Row A card: place a marker in any open cell in Row A, on any board." loading="lazy">
+            </div>
+            <h3 class="h3">Play a card</h3>
+            <p>Your card says where you can place a marker: a row, a column, a corner. On your board, or on anyone else's.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">2</span>
+            <div class="step__art">
+              <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/back-sibling-deck.webp" width="504" height="672" alt="The back of a Sibling Deck card: a board with a purple and a yellow marker." loading="lazy">
+            </div>
+            <h3 class="h3">Get three in a row</h3>
+            <p>Three of your color in a row, on your own board, scores a point. First sibling to 5 wins.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">3</span>
+            <div class="step__art">
+              <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/table-flip-angry.webp" width="504" height="672" alt="Big Bro's Table Flip card: clears every marker off the fullest board." loading="lazy">
+            </div>
+            <h3 class="h3">Survive Big Bro</h3>
+            <p>After every round, Big Bro flips a card from his own deck. He needs 5 points per player to win, and he isn't picky about how he gets them.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- TODO: 5. Photos of real people at a real table go here once there are playtest photos. -->
+
+    <!-- Meet Big Bro: moods and how he scores -->
+    <section class="band" aria-labelledby="bro-title">
+      <div class="container split">
+        <ul class="mood-pair">
+          <li><figure>
+            <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/broadcast-happy.webp" width="504" height="672" loading="lazy"
+                 alt="Happy Broadcast: place the board owner's own color at a coordinate on every board.">
+            <figcaption class="label">Happy</figcaption>
+          </figure></li>
+          <li><figure>
+            <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/broadcast-angry.webp" width="504" height="672" loading="lazy"
+                 alt="Angry Broadcast: place Big Bro's black marker at a coordinate on every board.">
+            <figcaption class="label">Angry</figcaption>
+          </figure></li>
+        </ul>
+        <div>
+          <div class="section-head" style="margin-bottom:0">
+            <span class="label">Meet Big Bro</span>
+            <h2 class="h2" id="bro-title">He's not really that mean. He just really wants to win.</h2>
+            <p>Big Bro doesn't take turns like you do. He runs his own deck, and every card comes with a mood. Same card, very different day.</p>
+          </div>
+          <ul class="pip-list">
+            <li><strong>Happy.</strong> <span>He lets you place your own color. Real progress, for once.</span></li>
+            <li><strong>Angry.</strong> <span>He drops his black marker to jam your line or steal it.</span></li>
+            <li><strong>Never picky.</strong> <span>Any full line with his marker in it scores for him, on anyone's board, even on your turn.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Sibling Deck -->
+    <section class="band band--sunken" aria-labelledby="cards-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">The cards</span>
+          <h2 class="h2" id="cards-title">28 Sibling cards. Every one puts your color on the board.</h2>
+          <p>Hold three, play one. And Big Bro's deck? We won't spoil it. Finding out what he can do is half the fun.</p>
+        </div>
+
+        <ul class="card-grid">
+          <li><figure>
+            <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/row-a.webp" width="504" height="672" alt="Row A: place a marker in any open cell in Row A." loading="lazy">
+            <figcaption><span class="label">Row</span><span>Any open cell in that row.</span></figcaption>
+          </figure></li>
+          <li><figure>
+            <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/column-2.webp" width="504" height="672" alt="Column 2: place a marker in any open cell in Column 2." loading="lazy">
+            <figcaption><span class="label">Column</span><span>Any open cell in that column.</span></figcaption>
+          </figure></li>
+          <li><figure>
+            <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/corner.webp" width="504" height="672" alt="Corner: place a marker on any open corner." loading="lazy">
+            <figcaption><span class="label">Corner</span><span>Any open corner.</span></figcaption>
+          </figure></li>
+          <li><figure>
+            <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/diamond.webp" width="504" height="672" alt="Diamond: place a marker on any open edge cell." loading="lazy">
+            <figcaption><span class="label">Diamond</span><span>Any of the four edge cells.</span></figcaption>
+          </figure></li>
+          <li><figure>
+            <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/move.webp" width="504" height="672" alt="Move: move any marker to the same cell on a different board." loading="lazy">
+            <figcaption><span class="label">Move</span><span>Take any marker to the same cell on another board.</span></figcaption>
+          </figure></li>
+          <li><figure>
+            <img class="game-card-img" src="/assets/games/tic-tac-bro/cards/sacrifice.webp" width="504" height="672" alt="Sacrifice: remove a marker from your board, draw 2, then play up to 2 more." loading="lazy">
+            <figcaption><span class="label">Sacrifice</span><span>Clear a cell on your board, then play two more cards.</span></figcaption>
+          </figure></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6. Get it -->
+    <section class="band" id="get-it" aria-labelledby="get-it-title">
+      <div class="container">
+        <div class="newsletter">
+          <div>
+            <h2 class="h2" id="get-it-title">Call dibs</h2>
+            <p>Tic-Tac-Bro is in playtesting. Leave your email and we'll send one short note when you can get a copy.</p>
+            <div class="get-it__links">
+              <a href="/assets/games/tic-tac-bro/tic-tac-bro-rules.pdf">Read the rules (PDF, 2 pages)</a>
+            </div>
+          </div>
+          <!-- Posts to MailerLite (form "XmJSTb"); assets/site.js submits it in the background. -->
+          <form class="signup" action="https://assets.mailerlite.com/jsonp/2661888/forms/199630676015712178/subscribe" method="post" novalidate>
+            <div class="signup__row">
+              <label class="visually-hidden" for="signup-email">Email address</label>
+              <input id="signup-email" name="fields[email]" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <button class="btn btn--primary" type="submit">Tell me</button>
+            </div>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+            <p class="signup__note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__brand">
+        <img src="/assets/logos/relatable-icon.svg" alt="" width="40" height="34">
+        <span class="label">Instantly familiar. Endlessly fun.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="/#games">Games</a></li>
+        <li><a href="/#why">About</a></li>
+        <li><a href="/#newsletter">Newsletter</a></li>
+        <li><a href="mailto:[contact email]">Contact</a></li>
+      </ul>
+      <p class="caption">© <span data-year>2026</span> Relatable · relatable.gg</p>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>
