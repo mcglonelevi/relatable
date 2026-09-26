@@ -8,6 +8,18 @@
 @font-face { font-family: "Rubik"; font-weight: 700; font-display: swap; src: url("assets/fonts/rubik-latin-700-normal.woff2") format("woff2"); }
 @font-face { font-family: "Rubik"; font-weight: 800; font-display: swap; src: url("assets/fonts/rubik-latin-800-normal.woff2") format("woff2"); }
 
+/* Arial resized to Rubik's width and vertical metrics, so text doesn't reflow (layout shift) when
+   Rubik swaps in. Values fitted to Rubik 400/800 against Arial/Arial Bold. */
+@font-face {
+  font-family: "Rubik Fallback"; font-weight: 400 600; src: local("Arial"), local("ArialMT");
+  size-adjust: 104.3%; ascent-override: 89.64%; descent-override: 23.97%; line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Rubik Fallback"; font-weight: 700 800; src: local("Arial Bold"), local("Arial-BoldMT");
+  size-adjust: 106.72%; ascent-override: 87.61%; descent-override: 23.43%; line-gap-override: 0%;
+}
+:root { --font-sans: "Rubik", "Rubik Fallback", system-ui, -apple-system, "Segoe UI", sans-serif; }
+
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -277,7 +289,8 @@ a:hover { text-decoration-thickness: 2px; }
 .newsletter > div p { margin-top: var(--space-3); opacity: 0.9; }
 
 /* Sign-up form. The panel is teal-deep in both themes, so the focus ring and messages use on-teal-deep. */
-.signup { display: grid; gap: var(--space-3); min-width: 0; }
+/* The note's row is always reserved (one line), so messages appearing don't shift the page. */
+.signup { display: grid; grid-template-rows: auto minmax(22px, auto); gap: var(--space-3); min-width: 0; }
 .signup__row { display: grid; gap: var(--space-3); }
 @media (min-width: 520px) { .signup__row { grid-template-columns: 1fr auto; } }
 .signup input {
@@ -297,10 +310,10 @@ a:hover { text-decoration-thickness: 2px; }
   display: flex; align-items: flex-start; gap: var(--space-2);
   font-size: 15px; line-height: 22px;
 }
-.signup__note:empty { display: none; }
 .signup__note svg { flex: none; width: 20px; height: 20px; margin-top: 1px; }
-.signup--done .signup__row { display: none; }
-.signup--done .signup__note { font-size: 17px; font-weight: 500; }
+/* Done: the thank-you takes the form's place without changing its height. */
+.signup--done .signup__row { grid-area: 1 / 1; visibility: hidden; }
+.signup--done .signup__note { grid-area: 1 / 1 / 3 / 2; align-self: center; font-size: 17px; font-weight: 500; }
 
 /* ---------- Footer ---------- */
 .site-footer {
