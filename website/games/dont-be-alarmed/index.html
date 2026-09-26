@@ -144,7 +144,7 @@
       <div class="container">
         <div class="section-head">
           <span class="label">The cards</span>
-          <h2 class="h2" id="cards-title">60 Time cards. Every one moves the clock.</h2>
+          <h2 class="h2" id="cards-title">60 Time cards. Manipulate the clock to your advantage.</h2>
           <p>Hold five, play one. The trick is knowing which one to save.</p>
         </div>
 
@@ -188,14 +188,15 @@
               <a href="/assets/games/dont-be-alarmed/dont-be-alarmed-rules.pdf">Read the rules (PDF, 2 pages)</a>
             </div>
           </div>
-          <!-- TODO: set data-endpoint to your mailing-list provider's form URL. -->
-          <form class="signup" data-endpoint="" method="post" novalidate>
-            <input type="hidden" name="interest" value="dont-be-alarmed">
+          <!-- Posts to MailerLite (form "XmJSTb"); assets/site.js submits it in the background. -->
+          <form class="signup" action="https://assets.mailerlite.com/jsonp/2661888/forms/199630676015712178/subscribe" method="post" novalidate>
             <div class="signup__row">
-              <label class="visually-hidden" for="email">Email address</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <label class="visually-hidden" for="signup-email">Email address</label>
+              <input id="signup-email" name="fields[email]" type="email" autocomplete="email" placeholder="you@example.com" required>
               <button class="btn btn--primary" type="submit">Tell me</button>
             </div>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
             <p class="signup__note" role="status" aria-live="polite"></p>
           </form>
         </div>

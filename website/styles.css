@@ -226,7 +226,11 @@ a:hover { text-decoration-thickness: 2px; }
 
 /* ---------- Why Relatable ---------- */
 .why { display: grid; gap: var(--space-12); align-items: start; }
-@media (min-width: 880px) { .why { grid-template-columns: 1.2fr 0.8fr; } }
+@media (min-width: 880px) {
+  .why { grid-template-columns: 1.2fr 0.8fr; }
+  /* Centre the quote beside the list; the bottom margin matches the 22px tail so bubble + tail look centred. */
+  .why .bubble { align-self: center; margin-bottom: 22px; }
+}
 
 .points { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-6); }
 .point { display: grid; grid-template-columns: 48px 1fr; gap: var(--space-4); align-items: start; }
@@ -270,25 +274,33 @@ a:hover { text-decoration-thickness: 2px; }
 @media (min-width: 880px) {
   .newsletter { grid-template-columns: 1fr 1fr; align-items: center; padding: var(--space-12); }
 }
-.newsletter p { margin-top: var(--space-3); opacity: 0.9; }
+.newsletter > div p { margin-top: var(--space-3); opacity: 0.9; }
 
-.signup { display: flex; flex-direction: column; gap: var(--space-3); }
+/* Sign-up form. The panel is teal-deep in both themes, so the focus ring and messages use on-teal-deep. */
+.signup { display: grid; gap: var(--space-3); min-width: 0; }
 .signup__row { display: grid; gap: var(--space-3); }
-@media (min-width: 520px) { .signup__row { display: flex; } }
+@media (min-width: 520px) { .signup__row { grid-template-columns: 1fr auto; } }
 .signup input {
-  flex: 1;
+  min-width: 0;
   min-height: 48px;
   padding: var(--space-3) var(--space-4);
-  font: 400 16px var(--font-sans);
-  color: #1F1B2E;
-  background: #FFFCF6;
-  border: 2px solid #1F1B2E;
+  font: 400 16px/1.2 var(--font-sans);
+  color: var(--ink);
+  background: var(--surface-raised);
+  border: 2px solid var(--ink);
   border-radius: var(--radius-md);
 }
-.signup input::placeholder { color: #5E5870; }
+.signup input::placeholder { color: var(--ink-muted); opacity: 1; }
 .signup :focus-visible { outline-color: var(--on-teal-deep); }
-.signup__note { font-size: 13px; line-height: 18px; }
+.signup button:disabled { cursor: progress; transform: translateY(4px); box-shadow: none; }
+.signup__note {
+  display: flex; align-items: flex-start; gap: var(--space-2);
+  font-size: 15px; line-height: 22px;
+}
 .signup__note:empty { display: none; }
+.signup__note svg { flex: none; width: 20px; height: 20px; margin-top: 1px; }
+.signup--done .signup__row { display: none; }
+.signup--done .signup__note { font-size: 17px; font-weight: 500; }
 
 /* ---------- Footer ---------- */
 .site-footer {

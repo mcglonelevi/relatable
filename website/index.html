@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Relatable · Instantly familiar. Endlessly fun.</title>
-  <meta name="description" content="Relatable is a board game studio. Every game starts from something you already know, then adds one twist.">
+  <meta name="description" content="Relatable is a board game studio. Every game starts from something you already know. Familiar with a twist.">
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" content="#F6F1E7" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#1F1B2E" media="(prefers-color-scheme: dark)">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://relatable.gg/">
   <meta property="og:title" content="Relatable · Instantly familiar. Endlessly fun.">
-  <meta property="og:description" content="Board games that start from something you already know, then add one twist.">
+  <meta property="og:description" content="Board games that start from something you already know. Familiar with a twist.">
   <meta property="og:image" content="https://relatable.gg/assets/social-share.png">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -142,8 +142,8 @@
         <div>
           <div class="section-head">
             <span class="label">Why “relatable”?</span>
-            <h2 class="h2" id="why-title">Games you can explain in a minute and play tonight</h2>
-            <p>We're a small studio making games for people who'd rather be playing than reading. If you can't explain a game at the table in one sentence, we keep working on it.</p>
+            <h2 class="h2" id="why-title">Games that feel familiar</h2>
+            <p>Games are most fun when there&apos;s something familiar -- something relatable. Whether it's a concept, an object, or a feeling, we start there and build our games on something everyone knows.</p>
           </div>
           <ul class="points">
             <li class="point">
@@ -157,20 +157,20 @@
             </li>
             <li class="point">
               <span class="point__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
-              </span>
-              <div>
-                <h3 class="h3">Add one twist</h3>
-                <p>Then we change one thing. That's where the strategy, the laughing and the “wait, you can do that?” come from.</p>
-              </div>
-            </li>
-            <li class="point">
-              <span class="point__icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </span>
               <div>
                 <h3 class="h3">Tested at real tables</h3>
-                <p>Every game gets played by families, friends and first-timers long before it ships. Zero rulebook stress.</p>
+                <p>Every game gets played by families, friends and first-timers long before it ships.</p>
+              </div>
+            </li>
+            <li class="point">
+              <span class="point__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+              </span>
+              <div>
+                <h3 class="h3">Relate to one another</h3>
+                <p>Having fun playing games is how we bring people together. Enjoy the moment.</p>
               </div>
             </li>
           </ul>
@@ -191,13 +191,15 @@
             <h2 class="h2" id="newsletter-title">Be first to the table</h2>
             <p>A short note when a new game is ready. No spam, no daily emails.</p>
           </div>
-          <!-- TODO: set data-endpoint (and method/field name if needed) to your mailing-list provider's form URL. -->
-          <form class="signup" data-endpoint="" method="post" novalidate>
+          <!-- Posts to MailerLite (form "XmJSTb"); assets/site.js submits it in the background. -->
+          <form class="signup" action="https://assets.mailerlite.com/jsonp/2661888/forms/199630676015712178/subscribe" method="post" novalidate>
             <div class="signup__row">
-              <label class="visually-hidden" for="email">Email address</label>
-              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <label class="visually-hidden" for="signup-email">Email address</label>
+              <input id="signup-email" name="fields[email]" type="email" autocomplete="email" placeholder="you@example.com" required>
               <button class="btn btn--primary" type="submit">Join the list</button>
             </div>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
             <p class="signup__note" role="status" aria-live="polite"></p>
           </form>
         </div>
