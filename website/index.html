@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Relatable · Instantly familiar. Endlessly fun.</title>
+  <meta name="description" content="Relatable is a board game studio. Every game starts from something you already know, then adds one twist.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F6F1E7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1F1B2E" media="(prefers-color-scheme: dark)">
+
+  <link rel="canonical" href="https://relatable.gg/">
+  <link rel="icon" href="/assets/logos/relatable-icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://relatable.gg/">
+  <meta property="og:title" content="Relatable · Instantly familiar. Endlessly fun.">
+  <meta property="og:description" content="Board games that start from something you already know, then add one twist.">
+  <meta property="og:image" content="https://relatable.gg/assets/social-share.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="/assets/fonts/rubik-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/rubik-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/tokens.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="/" aria-label="Relatable home">
+        <picture>
+          <source srcset="/assets/logos/relatable-logo-horizontal-notagline-on-dark.svg" media="(prefers-color-scheme: dark)">
+          <img src="/assets/logos/relatable-logo-horizontal-notagline-on-light.svg" alt="Relatable" width="142" height="42">
+        </picture>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="#games">Games</a></li>
+          <li><a href="#why">About</a></li>
+          <li><a href="#newsletter">Newsletter</a></li>
+        </ul>
+        <a class="btn btn--primary btn--small" href="#games">Get the games</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero: tagline + featured game -->
+    <section class="hero">
+      <div class="container">
+        <div>
+          <span class="label">A board game studio</span>
+          <h1 class="display">Instantly familiar. Endlessly fun.</h1>
+          <p class="body-lg">Every Relatable game starts with something you already know, then adds one twist. You'll get it before you read the rules. Mostly.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#games">See the games</a>
+            <a class="btn btn--secondary" href="#newsletter">Join the list</a>
+          </div>
+        </div>
+
+        <figure class="feature feature--game" style="margin:0">
+          <span class="sticker label">Coming soon</span>
+          <img class="box-art" src="/assets/games/dont-be-alarmed/box-top.webp" width="1000" height="1267"
+               alt="The Don't Be Alarmed box: a ringing blue alarm clock on a bright blue sunburst.">
+          <figcaption class="feature__meta">
+            <div>
+              <span class="label" style="color:var(--tomato-text)">Featured game</span>
+              <p class="h3"><a href="/games/dont-be-alarmed/">Don't Be Alarmed</a></p>
+              <p>Hit snooze on your friends' plans.</p>
+              <p class="caption">2–4 players · 20–40 min</p>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section class="band band--sunken" id="games" aria-labelledby="games-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="label">Our games</span>
+          <h2 class="h2" id="games-title">You already know how to play</h2>
+          <p>Each game takes one everyday idea and bends it. Pick the one that sounds like your table.</p>
+        </div>
+
+        <ul class="game-grid">
+          <li>
+            <article class="game-card">
+              <div class="game-card__art game-card__art--image">
+                <img src="/assets/games/dont-be-alarmed/logo-art.webp" width="1200" height="750" alt="" loading="lazy">
+              </div>
+              <div class="game-card__body">
+                <span class="tag label">Coming soon</span>
+                <h3 class="h3"><a href="/games/dont-be-alarmed/">Don't Be Alarmed</a></h3>
+                <p>Nobody likes it when their alarm goes off. So set off everyone else's first.</p>
+                <p class="caption">2–4 players · 20–40 min</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="game-card game-card--teal">
+              <div class="game-card__art">
+                <svg class="die" viewBox="0 0 100 100" aria-hidden="true">
+                  <rect width="100" height="100" rx="22"/>
+                  <circle cx="28" cy="28" r="9"/><circle cx="72" cy="72" r="9"/>
+                </svg>
+              </div>
+              <div class="game-card__body">
+                <span class="tag label">In playtesting</span>
+                <h3 class="h3">[Game name]</h3>
+                <p>[One-line hook: the familiar thing plus the twist.]</p>
+                <p class="caption">[PLAYERS] players · [MINUTES] min · Ages [AGE]+</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="game-card game-card--mustard">
+              <div class="game-card__art">
+                <svg class="die" viewBox="0 0 100 100" aria-hidden="true">
+                  <rect width="100" height="100" rx="22"/>
+                  <circle cx="50" cy="50" r="9"/>
+                </svg>
+              </div>
+              <div class="game-card__body">
+                <span class="tag label">On the drawing board</span>
+                <h3 class="h3">[Game name]</h3>
+                <p>[One-line hook: the familiar thing plus the twist.]</p>
+                <p class="caption">[PLAYERS] players · [MINUTES] min · Ages [AGE]+</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why Relatable -->
+    <section class="band" id="why" aria-labelledby="why-title">
+      <div class="container why">
+        <div>
+          <div class="section-head">
+            <span class="label">Why “relatable”?</span>
+            <h2 class="h2" id="why-title">Games you can explain in a minute and play tonight</h2>
+            <p>We're a small studio making games for people who'd rather be playing than reading. If you can't explain a game at the table in one sentence, we keep working on it.</p>
+          </div>
+          <ul class="points">
+            <li class="point">
+              <span class="point__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              </span>
+              <div>
+                <h3 class="h3">Start from the familiar</h3>
+                <p>An alarm clock. Tic-tac-toe. A moment everyone has lived through. You know what it's about before the box is open.</p>
+              </div>
+            </li>
+            <li class="point">
+              <span class="point__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+              </span>
+              <div>
+                <h3 class="h3">Add one twist</h3>
+                <p>Then we change one thing. That's where the strategy, the laughing and the “wait, you can do that?” come from.</p>
+              </div>
+            </li>
+            <li class="point">
+              <span class="point__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </span>
+              <div>
+                <h3 class="h3">Tested at real tables</h3>
+                <p>Every game gets played by families, friends and first-timers long before it ships. Zero rulebook stress.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <figure class="bubble">
+          <blockquote>“You already know how to play. Mostly.”</blockquote>
+          <figcaption class="label muted">The Relatable promise</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="band band--sunken" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="container">
+        <div class="newsletter">
+          <div>
+            <h2 class="h2" id="newsletter-title">Be first to the table</h2>
+            <p>A short note when a new game is ready. No spam, no daily emails.</p>
+          </div>
+          <!-- TODO: set data-endpoint (and method/field name if needed) to your mailing-list provider's form URL. -->
+          <form class="signup" data-endpoint="" method="post" novalidate>
+            <div class="signup__row">
+              <label class="visually-hidden" for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <button class="btn btn--primary" type="submit">Join the list</button>
+            </div>
+            <p class="signup__note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__brand">
+        <img src="/assets/logos/relatable-icon.svg" alt="" width="40" height="34">
+        <span class="label">Instantly familiar. Endlessly fun.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#games">Games</a></li>
+        <li><a href="#why">About</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="mailto:[contact email]">Contact</a></li>
+      </ul>
+      <p class="caption">© <span data-year>2026</span> Relatable · relatable.gg</p>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>
