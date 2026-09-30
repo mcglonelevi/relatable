@@ -1,6 +1,6 @@
-# Relatable
+# Chaotick
 
-Relatable is a board game design studio at **relatable.gg**. Every Relatable game starts from something people already know: an alarm clock, a game of tic-tac-toe, a moment everyone has lived through. Then it adds a twist. Players should understand what a game is about before they read the rules.
+Chaotick is a board game design studio at **chaotick.gg**. Every Chaotick game starts from something people already know: an alarm clock, a game of tic-tac-toe, a moment everyone has lived through. Then it adds a twist. Players should understand what a game is about before they read the rules.
 
 **Tagline:** Instantly familiar. Endlessly fun.
 
@@ -23,22 +23,19 @@ We write like a friend explaining a game at the table.
 
 ## Logo
 
-The logo is two dice shaped as speech bubbles. It shows people talking about a game, or relating to each other. The red die shows three pips and the teal die shows two. The teal die sits in front, with a small cut-out gap where they overlap.
+The logo is the word "chaotick", set in Rubik ExtraBold. "cha" is ink, and "tick" is tomato. The "o" is a clock: a tomato ring with an ink hour hand and a teal minute hand that zigzags like it's been knocked off course. A teal die showing a single pip dots the "i", and the "k" is tipped over, mid-tumble. Order and chaos in one word, like a game turn that doesn't go to plan.
 
 | File | Use it for |
 | --- | --- |
-| `relatable-logo-stacked-*` | Game boxes, posters, the About page, square spaces. |
-| `relatable-logo-horizontal-*` | Email signatures, banners, rulebook covers. The tagline is part of the logo here, so use it large enough to read. |
-| `relatable-logo-horizontal-notagline-*` | The website header and other small placements, where the tagline would be too small to read. |
-| `relatable-icon.svg` | Social media avatars, the browser-tab icon, the app icon, stickers, dice stamps. |
-| `relatable-wordmark-*` | Tight spaces where the dice already appear nearby. |
+| `chaotick-logo-*` | The website header, game boxes, posters, banners, business cards, email signatures, rulebook covers. |
+| `chaotick-icon.svg` | The clock "o" on a cream face. Social media avatars, the browser-tab icon, the app icon, stickers, and anywhere square and small. |
 
-Each file comes in `-on-light` (ink text) and `-on-dark` (cream text). The dice look the same on both.
+The logo comes in `-on-light` (ink "cha") and `-on-dark` (cream "cha", with a lighter tomato "tick" so it reads on ink). The clock, the die and their colours are the same on both. The icon has its own cream face, so it works on light and dark backgrounds.
 
-- **Clear space:** keep empty space around the logo equal to the width of one pip-column of the red die, about a quarter of its width. Nothing should intrude on it.
-- **Minimum size:** the horizontal logo at 140px wide (35mm in print), with or without the tagline. If the tagline won't be legible at the size you need, use the `-notagline` version. The icon at 24px (8mm). Below those sizes, use the icon alone.
+- **Clear space:** keep empty space around the logo equal to the height of the clock "o". Nothing should intrude on it.
+- **Minimum size:** the logo at 140px wide (30mm in print). The icon at 24px (8mm). Below those sizes, use the icon alone.
 - **Backgrounds:** use `surface` (cream) or `ink` (night). The logo also works on `mustard-soft` or `teal-soft`. Never put it on a tomato or teal fill, or on a busy photo.
-- **Don't:** recolor the dice, swap which die is in front, add pips, stretch or rotate the logo, add a drop shadow, or set "relatable" in a different font.
+- **Don't:** recolour the clock or the die, straighten the "k", swap the die for a plain dot, stretch or rotate the logo, add a drop shadow, or set "chaotick" in a different font.
 
 ## Colour
 

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512">
+<title>Chaotick icon</title>
+<circle cx="50" cy="50" r="38" fill="#F6F1E7"/>
+<circle cx="50" cy="50" r="38" fill="none" stroke="#E4572E" stroke-width="20"/>
+<path d="M50 50 L36 40" stroke="#1F1B2E" stroke-width="9" stroke-linecap="round"/>
+<path d="M50 50 L60 42 L56 37 L68 27" fill="none" stroke="#1B8A8C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="50" cy="50" r="6" fill="#1F1B2E"/>
+</svg>

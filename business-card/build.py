@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Builds the Relatable business card SVGs (front + back).
+"""Builds the Chaotick business card SVGs (front + back).
 
 Card: US standard 3.5 x 2 in, plus 0.125 in bleed on every side (3.75 x 2.25 in).
 Units: 300 per inch. Trim line sits 37.5 units in; keep text 75 units in (safe area).
@@ -20,14 +20,14 @@ CONTACT = {
     "name": "Levi McGlone",
     "title": "Founder & Designer",
     "phone": "614-929-1853",
-    "website": "relatable.gg",
-    "email": "levi@relatable.gg",
+    "website": "chaotick.gg",
+    "email": "levi@chaotick.gg",
 }
-QR_URL = "https://relatable.gg"
+QR_URL = "https://chaotick.gg"
 TAGLINE = "Instantly familiar. Endlessly fun."
 
 HERE = Path(__file__).parent
-KIT = HERE.parent / "Relatable-Brand-Kit"
+KIT = HERE.parent / "Chaotick-Brand-Kit"
 
 CREAM, INK = "#F6F1E7", "#1F1B2E"
 SURFACE_RAISED, LINE = "#FFFCF6", "#DDD3C2"   # light theme
@@ -85,9 +85,10 @@ def logo_inner(name, prefix):
 
 
 def place(name, prefix, x, y, width):
-    body, (_, _, vw, vh) = logo_inner(name, prefix)
+    """Draw a brand-kit logo with its viewBox's top-left corner at (x, y), scaled to `width`."""
+    body, (vx, vy, vw, vh) = logo_inner(name, prefix)
     s = width / vw
-    return f'<g transform="translate({x:.2f} {y:.2f}) scale({s:.5f})">{body}</g>', vh * s
+    return f'<g transform="translate({x - vx * s:.2f} {y - vy * s:.2f}) scale({s:.5f})">{body}</g>', vh * s
 
 
 def svg(title, content):
@@ -125,26 +126,22 @@ def qr_tile(url, right, bottom, size):
 
 
 def front():
-    # Dark scheme, two columns: stacked logo + tagline on the left, a divider, then name and contact details.
+    # Dark scheme, two columns: logo + tagline on the left, a divider, then name and contact details.
     parts = [f'<rect width="{W}" height="{H}" fill="{SURFACE_RAISED_DARK}"/>']
     mid_y = H / 2
 
-    # Left column: icon over wordmark (built from the separate files so the tagline can be set larger).
-    # Artwork bounds: icon x 10-280, y 10-236 of 290 x 246; wordmark x 17-680, y 15.75-125.25 of 696.77 x 141.44.
+    # Left column: the logo, with the tagline underneath on two lines.
+    # The logo's viewBox is its artwork bounds, so centring the viewBox centres the artwork.
     col_l, col_r = SAFE, 480
     col_cx = (col_l + col_r) / 2
-    si = 190 / 270
-    icon_h = 226 * si
-    sw = 330 / 663
-    mark_h = 109.5 * sw
-    group_h = icon_h + 26 + mark_h + 36 + 17 + 34   # icon, gap, wordmark, gap, two tagline lines
+    mark_w = 360
+    mark_h = mark_w * 120.4 / 555.7
+    group_h = mark_h + 44 + 17 + 34   # logo, gap, two tagline lines
     top = mid_y - group_h / 2
-    icon, _ = place("relatable-icon", "f", col_cx - (10 + 135) * si, top - 10 * si, 290 * si)
-    mark_top = top + icon_h + 26
-    mark, _ = place("relatable-wordmark-on-dark", "fw", col_cx - (17 + 331.5) * sw, mark_top - 15.75 * sw, 696.77 * sw)
-    parts += [icon, mark]
+    mark, _ = place("chaotick-logo-on-dark", "fw", col_cx - mark_w / 2, top, mark_w)
+    parts.append(mark)
     for i, line in enumerate(("INSTANTLY FAMILIAR.", "ENDLESSLY FUN.")):
-        y = mark_top + mark_h + 36 + 17 + i * 34
+        y = top + mark_h + 44 + 17 + i * 34
         parts.append(text_path(line, col_cx, y, 23, 600, MUSTARD, tracking=0.14, anchor="middle")[0])
 
     # Divider.
@@ -247,17 +244,17 @@ def sheet(title, card, bg, note, with_marks):
 
 
 if __name__ == "__main__":
-    (HERE / "relatable-business-card-front.svg").write_text(svg("Relatable business card - front", front()))
-    (HERE / "relatable-business-card-back.svg").write_text(svg("Relatable business card - back", back()))
+    (HERE / "chaotick-business-card-front.svg").write_text(svg("Chaotick business card - front", front()))
+    (HERE / "chaotick-business-card-back.svg").write_text(svg("Chaotick business card - back", back()))
 
     out = HERE / "print"
     out.mkdir(exist_ok=True)
     (out / "sheet-1-fronts.svg").write_text(sheet(
-        "Relatable business cards - fronts (letter)", front(), SURFACE_RAISED_DARK,
+        "Chaotick business cards - fronts (letter)", front(), SURFACE_RAISED_DARK,
         "Page 1 of 2 \u00b7 Fronts \u00b7 Print at 100% / Actual size", True))
     # Backs line up with the fronts when printed double-sided, flipping on the long edge. The layout is
     # symmetric left-to-right, so the same positions work. No marks here: cut from the front side.
     (out / "sheet-2-backs.svg").write_text(sheet(
-        "Relatable business cards - backs (letter)", back(), CREAM,
+        "Chaotick business cards - backs (letter)", back(), CREAM,
         "Page 2 of 2 \u00b7 Backs \u00b7 Print double-sided, flip on long edge", False))
     print("Wrote card SVGs and print sheets to", HERE)

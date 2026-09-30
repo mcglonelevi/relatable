@@ -1,6 +1,6 @@
 # Design brief
 
-What we're building, who it's for and how it should feel. Use it when you (or anyone you hire) start work on the website, social media, packaging or anything else with the Relatable name on it.
+What we're building, who it's for and how it should feel. Use it when you (or anyone you hire) start work on the website, social media, packaging or anything else with the Chaotick name on it.
 
 ## The idea in one line
 
@@ -11,24 +11,24 @@ Every page should do what the games do: show something familiar first, then the 
 - **Casual players and families.** They want a game they can explain in a minute and play tonight. They're not hobby gamers and won't read long rules.
 - **Gift buyers.** They need to see at a glance who a game is for, how many can play and how long it takes.
 - **Stores, conventions and press.** They need clear game info, good photos and a way to get in touch.
-- **Future backers.** If a game goes to crowdfunding, the site is where people check that Relatable is real and trustworthy.
+- **Future backers.** If a game goes to crowdfunding, the site is where people check that Chaotick is real and trustworthy.
 
-## Website: relatable.gg
+## Website: chaotick.gg
 
 ### Goals, in order
 
 1. Explain each game in one glance: the familiar thing plus the twist.
 2. Get visitors to take the next step: buy, back a campaign, or join the mailing list.
-3. Show that Relatable is a small, real studio with a point of view.
+3. Show that Chaotick is a small, real studio with a point of view.
 
 ### Pages
 
 | Page | Job | Key content |
 | --- | --- | --- |
-| **Home** | Say what Relatable is in five seconds. | A hero showing the tagline and a featured game, a row of game cards, a short "Why relatable?" section and a mailing-list sign-up. |
+| **Home** | Say what Chaotick is in five seconds. | A hero showing the tagline and a featured game, a row of game cards, a short "About Chaotick" section and a mailing-list sign-up. |
 | **Games** | Browse everything. | A game card for each game, with its lead colour, name, a one-line hook and stats (players · time · age). |
 | **Game page** (one per game) | Make someone want to play. | The familiar thing, then the twist, then "how it plays" in 3 steps, photos, stats, a rules PDF, and buy/back/notify buttons. |
-| **About** | Tell the studio story. | Who's behind it, why "relatable", how games get made (playtesting), and photos of real playtest tables. |
+| **About** | Tell the studio story. | Who's behind it, why "Chaotick", how games get made (playtesting), and photos of real playtest tables. |
 | **Contact / Press** | Make business easy. | An email address, a press kit (logos, box shots, one-sheets) and convention dates. |
 | **Newsletter** | Build the list. | A single field and an honest promise ("A short note when a new game is ready"). |
 
@@ -54,13 +54,13 @@ Every game page follows this order:
 
 ### Components to build
 
-Header (horizontal logo, nav, a "Get the games" button), footer (icon, links, newsletter), button (primary, secondary, text), game card, stats bar, "how it plays" steps, speech-bubble quote, newsletter form, tag (lead-colour soft tints), photo frame.
+Header (logo, nav, a "Get the games" button), footer (icon, links, newsletter), button (primary, secondary, text), game card, stats bar, "how it plays" steps, speech-bubble quote, newsletter form, tag (lead-colour soft tints), photo frame.
 
 ### Technical notes
 
 - Load Rubik from Google Fonts or self-host the WOFF2 files included in this system (weights 400–800).
-- Use `relatable-icon.svg` as the browser-tab icon. Give it a cream rounded-square background for the Apple touch icon.
-- For the social share image (1200×630), use the horizontal logo on cream with the featured game's lead-colour block.
+- Use `chaotick-icon.svg` as the browser-tab icon. Give it a cream rounded-square background for the Apple touch icon.
+- For the social share image (1200×630), use the logo on cream with the tagline underneath.
 
 ## Other places the brand appears
 
@@ -72,15 +72,15 @@ Header (horizontal logo, nav, a "Get the games" button), footer (icon, links, ne
 
 ### Game boxes and components
 
-- The stacked logo sits on the box's top corner or side panel. The game's own title is the hero, and Relatable is the maker's mark.
+- The logo sits on the box's top corner or side panel. The game's own title is the hero, and Chaotick is the maker's mark.
 - Each box uses its lead colour as the dominant field. The other two brand colours are accents.
 - The back of the box follows the game page order: the familiar thing, the twist, stats, a photo.
 - Rulebooks use Rubik, `label` headers, numbered steps and pip bullets. Keep the first page to "How to win" in one sentence.
 
 ### Conventions and events
 
-- **Table banner:** the horizontal logo, the tagline and the featured game's lead colour. It should be readable from 3 metres away.
-- **Stickers and handouts:** die-cut stickers of the icon, and a business card with the icon on the front and relatable.gg on the back.
+- **Table banner:** the logo, the tagline and the featured game's lead colour. It should be readable from 3 metres away.
+- **Stickers and handouts:** die-cut stickers of the icon, and a business card with the logo on the front and chaotick.gg on the back.
 - **Demo table:** a cream tablecloth with a tomato runner, so the table itself is the brand.
 
 ## What we still need
