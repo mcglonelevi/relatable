@@ -30,7 +30,7 @@ The logo is the word "chaotick", set in Rubik ExtraBold. "cha" is ink, and "tick
 | `chaotick-logo-*` | The website header, game boxes, posters, banners, business cards, email signatures, rulebook covers. |
 | `chaotick-icon.svg` | The clock "o" on a cream face. Social media avatars, the browser-tab icon, the app icon, stickers, and anywhere square and small. |
 
-The logo comes in `-on-light` (ink "cha") and `-on-dark` (cream "cha", with a lighter tomato "tick" so it reads on ink). The clock, the die and their colours are the same on both. The icon has its own cream face, so it works on light and dark backgrounds.
+The logo comes in `-on-light` (ink "cha") and `-on-dark` (cream "cha", with a lighter tomato "tick" so it reads on ink). On the dark version the clock's hour hand and centre are cream, so they stay visible on ink; the rest of the clock and the die are the same on both. The icon has its own cream face, so it works on light and dark backgrounds.
 
 - **Clear space:** keep empty space around the logo equal to the height of the clock "o". Nothing should intrude on it.
 - **Minimum size:** the logo at 140px wide (30mm in print). The icon at 24px (8mm). Below those sizes, use the icon alone.

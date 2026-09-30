@@ -3,6 +3,79 @@ document.querySelectorAll("[data-year]").forEach((el) => {
   el.textContent = new Date().getFullYear();
 });
 
+// Header logo. The clock "o" shows the visitor's local time: on load the hands sweep forward to it
+// (the minute hand takes an extra lap), then they're nudged along every 30 seconds. The die over the
+// "i" rolls on load. Hovering (or tabbing to) the logo rolls the die again and spins both hands a full turn.
+document.querySelectorAll(".logo").forEach((logo) => {
+  const clock = logo.querySelector(".logo-clock");
+  const die = logo.querySelector(".logo-die");
+  if (!clock) return;
+  const hands = { hour: clock.querySelector(".logo-hour"), minute: clock.querySelector(".logo-minute") };
+  // Angles the hands are drawn at in the artwork, in degrees clockwise from 12 o'clock.
+  const DRAWN = { hour: 305.5, minute: 38 };
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  // Rotation applied on top of the artwork: what's on screen now, and where each hand is headed.
+  // Both only ever grow, so the hands always move clockwise.
+  const shown = { hour: 0, minute: 0 };
+  const heading = { hour: 0, minute: 0 };
+  const runs = {};
+
+  // The hands live in the clock's own 100 x 100 space, centred on (50, 50).
+  const rotate = (name, deg) => {
+    shown[name] = deg;
+    hands[name].setAttribute("transform", `rotate(${deg.toFixed(2)} 50 50)`);
+  };
+
+  // Ease a hand from wherever it is now to `to`, replacing any animation already running on it.
+  const animate = (name, to, duration) => {
+    heading[name] = to;
+    if (reduceMotion || !duration) return rotate(name, to);
+    const from = shown[name];
+    const start = performance.now();
+    const run = (runs[name] = {});
+    const frame = (now) => {
+      if (runs[name] !== run) return; // a newer animation took over
+      const t = Math.min(Math.max((now - start) / duration, 0), 1);
+      rotate(name, from + (to - from) * (1 - Math.pow(1 - t, 3))); // ease-out
+      if (t < 1) requestAnimationFrame(frame);
+    };
+    requestAnimationFrame(frame);
+  };
+
+  const moveToNow = (extraLap, duration) => {
+    const d = new Date();
+    const minutes = d.getMinutes() + d.getSeconds() / 60;
+    const target = { hour: ((d.getHours() % 12) + minutes / 60) * 30, minute: minutes * 6 };
+    for (const name of ["hour", "minute"]) {
+      const pointing = (DRAWN[name] + heading[name]) % 360;
+      const step = (((target[name] - pointing) % 360) + 360) % 360 + (name === "minute" ? extraLap : 0);
+      animate(name, heading[name] + step, duration);
+    }
+  };
+
+  // A full turn for both hands; they land back on the current time.
+  const spin = () => {
+    for (const name of ["hour", "minute"]) animate(name, heading[name] + 360, 900);
+  };
+
+  // Restart the CSS roll.
+  const roll = () => {
+    if (!die || reduceMotion) return;
+    die.classList.remove("is-rolling");
+    die.getBoundingClientRect(); // reflow, so re-adding the class starts the animation over
+    die.classList.add("is-rolling");
+  };
+  die?.addEventListener("animationend", () => die.classList.remove("is-rolling"));
+
+  const play = () => { roll(); spin(); };
+  logo.addEventListener("mouseenter", play);
+  logo.addEventListener("focus", () => { if (logo.matches(":focus-visible")) play(); });
+
+  moveToNow(360, 1400);
+  roll();
+  setInterval(() => moveToNow(0, 600), 30_000);
+});
+
 // Lucide icons (check-circle, alert-circle): messages never rely on colour alone.
 const ICONS = {
   success: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>',

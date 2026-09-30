@@ -4,4 +4,4 @@
 cd "$(dirname "$0")" || exit 1
 PORT="${1:-8000}"
 echo "Chaotick site running at http://localhost:$PORT  (Ctrl+C to stop)"
-exec python3 -m http.server "$PORT" --bind 127.0.0.1
+exec python3 -m http.server "$PORT" --bind 0.0.0.0
